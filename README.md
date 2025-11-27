@@ -2,6 +2,92 @@
 Cloud-Native Backend Solutions
 ---
 
+Struktur Project:
+
+```
+simple-workers-platform/
+├── 📁 workers/
+│   ├── api/          # Main API routes
+│   ├── admin/        # Management API  
+│   └── storage/      # File handling
+├── 📁 public/        # Dashboard static files
+├── 📄 wrangler.toml  # Configuration
+├── 📄 package.json
+└── 📄 README.md
+```
+
+Cloudflare Workers-based backend platform untuk deploy custom workers.
+
+## 🛠 Setup
+
+**Install Wrangler**
+```bash
+npm install -g wrangler
+wrangler login
+```
+
+Create Resources
+
+```bash
+# Create D1 database
+wrangler d1 create main_db
+
+# Create KV namespace  
+wrangler kv:namespace create KV
+
+# Create R2 bucket
+wrangler r2 bucket create tenant-files
+```
+
+1. Update wrangler.toml dengan IDs yang didapat
+2. Initialize Database
+
+```bash
+npm run db:init    # Development
+npm run db:prod    # Production
+```
+
+Deploy
+
+```bash
+npm run deploy
+```
+
+🎯 Usage
+
+1. Access Dashboard: https://your-domain.com/dashboard
+2. Deploy Worker: Isi form di dashboard
+3. Test Worker:
+
+```bash
+curl -X POST https://your-domain.com/api/demo/hello \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Test"}'
+```
+
+📝 Example Workers
+
+Simple API:
+
+```javascript
+const data = await context.request.json();
+return context.createResponse({
+  message: "Hello " + (data.name || "World"),
+  timestamp: new Date().toISOString()
+});
+```
+
+Database Query:
+
+```javascript
+const users = await context.env.DB.prepare(
+  "SELECT * FROM tenants WHERE id = ?"
+).bind(context.env.tenantId).all();
+
+return context.createResponse({ users: users.results });
+```
+
+
 🎯 Vertical-Specific Solutions
 
 1. CMS & Blog Platform
