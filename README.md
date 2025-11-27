@@ -1,10 +1,11 @@
 # nimbus-workers-platform
 Cloud-Native Backend Solutions
-
+---
 
 🎯 Vertical-Specific Solutions
 
 1. CMS & Blog Platform
+Use Case: Startup yang mau bikin CMS custom tanpa setup backend
 
 ```javascript
 // Worker untuk blog API
@@ -26,11 +27,10 @@ if (action === 'createPost') {
   return context.createResponse({ success: true });
 }
 ```
-
-Use Case: Startup yang mau bikin CMS custom tanpa setup backend
 ---
 
 2. E-commerce Backend
+Use Case: Toko online kecil yang butuh backend custom
 
 ```javascript
 // Worker untuk toko online
@@ -61,11 +61,10 @@ if (action === 'createOrder') {
   });
 }
 ```
-
-Use Case: Toko online kecil yang butuh backend custom
 ---
 
 3. SaaS Product Backend
+Use Case: Startup SaaS yang butuh analytics backend
 
 ```javascript
 // Worker untuk SaaS analytics
@@ -87,13 +86,12 @@ const stats = await context.env.DB.prepare(`
 
 return context.createResponse({ stats });
 ```
-
-Use Case: Startup SaaS yang butuh analytics backend
 ---
 
 🛠 Developer Tools & APIs
 
 4. API Gateway & Proxy
+Use Case: Perusahaan yang mau bikin internal API gateway
 
 ```javascript
 // Worker sebagai API gateway
@@ -116,11 +114,10 @@ return context.createResponse({
   tenant: context.env.tenantId 
 });
 ```
-
-Use Case: Perusahaan yang mau bikin internal API gateway
 ---
 
 5. Form Backend & Automation
+Use Case: Agency yang butuh backend untuk form handling client
 
 ```javascript
 // Worker untuk handle form submissions
@@ -150,11 +147,10 @@ await context.fetch('https://api.resend.com/emails', {
 
 return context.createResponse({ success: true });
 ```
-
-Use Case: Agency yang butuh backend untuk form handling client
 ---
 
 6. Real-time Features
+Use Case: Aplikasi yang butuh real-time features tanpa setup kompleks
 
 ```javascript
 // Worker untuk real-time notifications
@@ -175,13 +171,12 @@ for (const client of clients.results) {
 
 return context.createResponse({ delivered: clients.results.length });
 ```
-
-Use Case: Aplikasi yang butuh real-time features tanpa setup kompleks
 ---
 
 🏢 Business & Enterprise
 
 7. Internal Tools Backend
+Use Case: Perusahaan yang mau bikin internal tools custom
 
 ```javascript
 // Worker untuk internal company tools
@@ -208,11 +203,10 @@ if (action === 'submitExpense') {
   return context.createResponse({ expenseId, status: 'submitted' });
 }
 ```
-
-Use Case: Perusahaan yang mau bikin internal tools custom
 ---
 
 8. Microservices Architecture
+Use Case: Tim development yang mau implement microservices
 
 ```javascript
 // Worker sebagai microservice
@@ -239,13 +233,12 @@ if (serviceName === 'notification-service') {
   return context.createResponse({ sent: true });
 }
 ```
-
-Use Case: Tim development yang mau implement microservices
 ---
 
 🎮 Creative & Gaming
 
 9. Game Backend Services
+Use Case: Indie game developers butuh backend simple
 
 ```javascript
 // Worker untuk game backend
@@ -267,11 +260,10 @@ if (action === 'getLeaderboard') {
   return context.createResponse({ leaderboard: leaders.results });
 }
 ```
-
-Use Case: Indie game developers butuh backend simple
 ---
 
 10. Content Management & Media
+Use Case: Content creators butuh processing pipeline
 
 ```javascript
 // Worker untuk content management
@@ -298,8 +290,6 @@ if (contentType === 'video' && operation === 'process') {
   return context.createResponse({ jobId, status: 'processing' });
 }
 ```
-
-Use Case: Content creators butuh processing pipeline
 ---
 
 💰 Monetization Opportunities
