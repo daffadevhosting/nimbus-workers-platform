@@ -341,11 +341,11 @@ Competitive Advantages:
 
 Contoh perusahaan yang bisa pakai ini:
 
-· Agency web development - Backend untuk 50+ client websites
-· Startup e-commerce - Custom cart & payment processing
-· Game studio - Player progress sync & leaderboards
-· SaaS company - Multi-tenant customer portals
-· Enterprise - Internal HR & expense tools
+- Agency web development - Backend untuk 50+ client websites
+- Startup e-commerce - Custom cart & payment processing
+- Game studio - Player progress sync & leaderboards
+- SaaS company - Multi-tenant customer portals
+- Enterprise - Internal HR & expense tools
 
 🎯 Go-to-Market Strategy
 
