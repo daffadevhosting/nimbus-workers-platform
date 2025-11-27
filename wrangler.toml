@@ -1,0 +1,43 @@
+name = "nimbus-workers"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+
+# --- Binding Sumber Daya ---
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "main_db"
+database_id = "<GANTI_DENGAN_ID_D1_PRODUKSI_ANDA>"
+
+# R2 Bucket
+[[r2_buckets]] 
+binding = "BUCKET"
+bucket_name = "tenant-files"
+
+# KV Namespace
+[[kv_namespaces]]
+binding = "KV"
+id = "<GANTI_DENGAN_ID_KV_PRODUKSI_KAMU>"
+
+# --- Lingkungan Development ---
+
+[env.development]
+
+# D1 Database Development
+[[d1_databases]]
+binding = "DB"
+database_name = "main_db_dev" # Nama database disarankan berbeda untuk dev/prod
+database_id = "<GANTI_DENGAN_ID_D1_DEVELOPMENT_KAMU>"
+
+# R2 Bucket Development
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "tenant-files-dev"
+
+# KV Namespace Development
+[[kv_namespaces]]
+binding = "KV"
+id = "<GANTI_DENGAN_ID_KV_DEVELOPMENT_KAMU>"
