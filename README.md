@@ -28,6 +28,7 @@ if (action === 'createPost') {
 ```
 
 Use Case: Startup yang mau bikin CMS custom tanpa setup backend
+---
 
 2. E-commerce Backend
 
@@ -62,6 +63,7 @@ if (action === 'createOrder') {
 ```
 
 Use Case: Toko online kecil yang butuh backend custom
+---
 
 3. SaaS Product Backend
 
@@ -87,6 +89,7 @@ return context.createResponse({ stats });
 ```
 
 Use Case: Startup SaaS yang butuh analytics backend
+---
 
 🛠 Developer Tools & APIs
 
@@ -115,6 +118,7 @@ return context.createResponse({
 ```
 
 Use Case: Perusahaan yang mau bikin internal API gateway
+---
 
 5. Form Backend & Automation
 
@@ -148,6 +152,7 @@ return context.createResponse({ success: true });
 ```
 
 Use Case: Agency yang butuh backend untuk form handling client
+---
 
 6. Real-time Features
 
@@ -172,6 +177,7 @@ return context.createResponse({ delivered: clients.results.length });
 ```
 
 Use Case: Aplikasi yang butuh real-time features tanpa setup kompleks
+---
 
 🏢 Business & Enterprise
 
@@ -204,6 +210,7 @@ if (action === 'submitExpense') {
 ```
 
 Use Case: Perusahaan yang mau bikin internal tools custom
+---
 
 8. Microservices Architecture
 
@@ -234,6 +241,7 @@ if (serviceName === 'notification-service') {
 ```
 
 Use Case: Tim development yang mau implement microservices
+---
 
 🎮 Creative & Gaming
 
@@ -261,6 +269,7 @@ if (action === 'getLeaderboard') {
 ```
 
 Use Case: Indie game developers butuh backend simple
+---
 
 10. Content Management & Media
 
@@ -291,6 +300,7 @@ if (contentType === 'video' && operation === 'process') {
 ```
 
 Use Case: Content creators butuh processing pipeline
+---
 
 💰 Monetization Opportunities
 
@@ -345,3 +355,5 @@ Contoh perusahaan yang bisa pakai ini:
 2. Target specific verticals (e-commerce, blogs, etc.)
 3. Build template workers untuk common use cases.
 4. Scale dengan enterprise features.
+
+# SILAHKAN CURI
