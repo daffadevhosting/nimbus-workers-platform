@@ -5,7 +5,8 @@ Cloud-Native Backend Solutions
 🎯 Vertical-Specific Solutions
 
 1. CMS & Blog Platform
-Use Case: Startup yang mau bikin CMS custom tanpa setup backend
+
+- Use Case: Startup yang mau bikin CMS custom tanpa setup backend
 
 ```javascript
 // Worker untuk blog API
@@ -30,7 +31,8 @@ if (action === 'createPost') {
 ---
 
 2. E-commerce Backend
-Use Case: Toko online kecil yang butuh backend custom
+
+- Use Case: Toko online kecil yang butuh backend custom
 
 ```javascript
 // Worker untuk toko online
@@ -64,7 +66,8 @@ if (action === 'createOrder') {
 ---
 
 3. SaaS Product Backend
-Use Case: Startup SaaS yang butuh analytics backend
+
+- Use Case: Startup SaaS yang butuh analytics backend
 
 ```javascript
 // Worker untuk SaaS analytics
@@ -91,7 +94,7 @@ return context.createResponse({ stats });
 🛠 Developer Tools & APIs
 
 4. API Gateway & Proxy
-Use Case: Perusahaan yang mau bikin internal API gateway
+- Use Case: Perusahaan yang mau bikin internal API gateway
 
 ```javascript
 // Worker sebagai API gateway
@@ -117,7 +120,7 @@ return context.createResponse({
 ---
 
 5. Form Backend & Automation
-Use Case: Agency yang butuh backend untuk form handling client
+- Use Case: Agency yang butuh backend untuk form handling client
 
 ```javascript
 // Worker untuk handle form submissions
@@ -150,7 +153,8 @@ return context.createResponse({ success: true });
 ---
 
 6. Real-time Features
-Use Case: Aplikasi yang butuh real-time features tanpa setup kompleks
+
+- Use Case: Aplikasi yang butuh real-time features tanpa setup kompleks
 
 ```javascript
 // Worker untuk real-time notifications
@@ -176,7 +180,8 @@ return context.createResponse({ delivered: clients.results.length });
 🏢 Business & Enterprise
 
 7. Internal Tools Backend
-Use Case: Perusahaan yang mau bikin internal tools custom
+
+- Use Case: Perusahaan yang mau bikin internal tools custom
 
 ```javascript
 // Worker untuk internal company tools
@@ -206,7 +211,8 @@ if (action === 'submitExpense') {
 ---
 
 8. Microservices Architecture
-Use Case: Tim development yang mau implement microservices
+
+- Use Case: Tim development yang mau implement microservices
 
 ```javascript
 // Worker sebagai microservice
@@ -238,7 +244,8 @@ if (serviceName === 'notification-service') {
 🎮 Creative & Gaming
 
 9. Game Backend Services
-Use Case: Indie game developers butuh backend simple
+
+- Use Case: Indie game developers butuh backend simple
 
 ```javascript
 // Worker untuk game backend
@@ -263,7 +270,8 @@ if (action === 'getLeaderboard') {
 ---
 
 10. Content Management & Media
-Use Case: Content creators butuh processing pipeline
+
+- Use Case: Content creators butuh processing pipeline
 
 ```javascript
 // Worker untuk content management
